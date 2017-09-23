@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">PrototipoTelas</string>
+    <string name="legendaMenu">Menu</string>
+    <string name="legendaNovoProduto">Novo Produto</string>
+    <string name="legendaIniciar">Iniciar</string>
+    <string name="legendaSair">Sair</string>
+    <string name="legendaSelecioneProduto"> Selecione um produto:</string>
+    <string name="legendaEstoque">Estoque</string>
+    <string name="legendaProduto">Produto</string>
+    <string name="legendaCadastrar">Cadastrar</string>
+    <string name="legendaCancelar">Cancelar</string>
+    <string name="legendaRepitaSenha">Repita a Senha:</string>
+    <string name="legendaSenha">Senha:</string>
+    <string name="legendaEmail">E-mail:</string>
+    <string name="legendaNome">Nome:</string>
+    <string name="legendaCadastroUsuario">Cadastro de usuário</string>
 </resources>

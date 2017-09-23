@@ -10,7 +10,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="15dp"
-        android:text="Cadastro de usuário"
+        android:text="@string/legendaCadastroUsuario"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@android:color/black"
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Nome:"
+        android:text="@string/legendaNome"
         android:layout_below="@+id/textView13"
         android:layout_alignParentStart="true"
         android:layout_marginTop="11dp" />
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="E-mail:"
+        android:text="@string/legendaEmail"
         android:layout_marginTop="13dp"
         android:layout_below="@+id/editText10"
         android:layout_alignParentStart="true" />
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Senha:"
+        android:text="@string/legendaSenha"
         android:layout_marginTop="15dp"
         android:layout_below="@+id/editText12"
         android:layout_alignParentStart="true" />
@@ -56,7 +56,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Repita a senha:"
+        android:text="@string/legendaRepitaSenha"
         android:layout_below="@+id/editText13"
         android:layout_alignParentStart="true"
         android:layout_marginTop="11dp" />
@@ -67,7 +67,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
         android:layout_marginEnd="16dp"
-        android:text="Cadastrar"
+        android:text="@string/legendaCadastrar"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true" />
 
@@ -78,6 +78,6 @@
         android:layout_alignParentStart="true"
         android:layout_alignTop="@+id/button13"
         android:layout_marginStart="18dp"
-        android:text="Cancelar" />
+        android:text="@string/legendaCancelar" />
 
 </RelativeLayout>

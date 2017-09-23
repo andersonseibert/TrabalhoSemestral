@@ -216,7 +216,7 @@
         android:id="@+id/button9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sair"
+        android:text="@string/legendaSair"
         android:layout_alignBottom="@+id/button10"
         android:layout_alignStart="@+id/textView24" />
 
