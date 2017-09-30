@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PrototipoTelas</string>
+    <string name="app_name">Bem Vindo</string>
     <string name="legendaMenu">Menu</string>
     <string name="legendaNovoProduto">Novo Produto</string>
     <string name="legendaIniciar">Iniciar</string>
@@ -15,4 +15,10 @@
     <string name="legendaNome">Nome:</string>
     <string name="legendaCadastroUsuario">Cadastro de usuário</string>
     <string name="legendaCadastroUsuario2">Cadastro de usuário</string>
+    <string name="title_activity_menu">MenuActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>
