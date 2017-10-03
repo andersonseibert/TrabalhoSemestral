@@ -15,27 +15,6 @@
         android:inputType="textPersonName"
         android:text="Nome do Produto:" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView4"
-        android:layout_marginTop="11dp"
-        android:text="Componente 3    -      Quantidade mínima 01"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Componente 1    -      Quantidade mínima 01"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="18sp"
-        android:layout_below="@+id/button4"
-        android:layout_alignParentStart="true" />
-
     <EditText
         android:id="@+id/editText4"
         android:layout_width="match_parent"
@@ -64,7 +43,8 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/editText7"
         android:layout_marginTop="16dp"
-        android:text=" Componentes:"
+        android:text=" Composição:"
+        android:textAlignment="center"
         android:textColor="@android:color/background_dark"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -77,7 +57,7 @@
         android:layout_below="@+id/textView"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Componente:" />
+        android:text="Ingrediente:" />
 
     <EditText
         android:id="@+id/editText11"
@@ -87,40 +67,29 @@
         android:layout_below="@+id/editText9"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Quantidade Mínima:" />
+        android:text="Quantidade:" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="11dp"
-        android:text="Add componente"
+        android:layout_alignParentEnd="true"
         android:layout_below="@+id/editText11"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
-        android:text="Componente 2    -      Quantidade mínima 01"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="18sp"
-        android:layout_below="@+id/textView6"
-        android:layout_alignParentStart="true" />
+        android:layout_marginEnd="11dp"
+        android:text="Adicionar" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="15dp"
         android:text="Cadastro de Produto"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="19dp" />
 
     <Button
         android:id="@+id/button7"
@@ -137,5 +106,13 @@
         android:text="Salvar"
         android:layout_alignParentBottom="true"
         android:layout_alignEnd="@+id/button4" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button4"
+        android:layout_above="@+id/button7"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
