@@ -24,9 +24,10 @@
         android:layout_above="@+id/edtLogin"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="46dp"
-        android:text="Empresa Tall"
-        android:textColor="@android:color/background_dark"
-        android:textSize="45sp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Make Drink"
+        android:textColor="?attr/actionModeSplitBackground"
+        android:textSize="50sp"
         android:textStyle="bold" />
 
     <Button

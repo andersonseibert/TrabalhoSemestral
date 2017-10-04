@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bem Vindo</string>
+    <string name="app_name">Make Drink App</string>
     <string name="legendaMenu">Menu</string>
     <string name="legendaNovoProduto">Novo Produto</string>
     <string name="legendaIniciar">Iniciar</string>
@@ -14,8 +14,8 @@
     <string name="legendaEmail">E-mail:</string>
     <string name="legendaNome">Nome:</string>
     <string name="legendaCadastroUsuario">Cadastro de usuário</string>
-    <string name="legendaCadastroUsuario2">Cadastro de usuário</string>
-    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="title_estoque">Estoque</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

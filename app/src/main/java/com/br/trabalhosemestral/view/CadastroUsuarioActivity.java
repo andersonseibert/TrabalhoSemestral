@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 
+import com.br.trabalhosemestral.model.Estoque;
+
 import br.com.ajm.prototipo.prototipotelas.R;
 
 /**
@@ -21,5 +23,10 @@ public class CadastroUsuarioActivity extends Activity{
 
     public void VoltarTelaLogin(View view){
         Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+    }
+    public void button (View view){
+        Intent intent = new Intent(getBaseContext(), Estoque.class);
+        startActivity(intent);
+
     }
 }

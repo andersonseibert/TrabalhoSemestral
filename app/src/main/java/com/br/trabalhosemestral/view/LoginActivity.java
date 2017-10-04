@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.br.trabalhosemestral.model.Estoque;
+
 import br.com.ajm.prototipo.prototipotelas.R;
 
 /**
@@ -48,4 +50,5 @@ public class LoginActivity extends Activity {
         Intent intent = new Intent(getApplicationContext(), CadastroUsuarioActivity.class);
         startActivity(intent);
     }
+
 }
