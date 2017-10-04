@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/textView13"
@@ -17,68 +18,103 @@
         android:textSize="24sp"
         android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView13"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:text="Nome de Usuário:"
+        android:textSize="15dp" />
+
     <EditText
         android:id="@+id/editText10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/legendaNome"
-        android:layout_below="@+id/textView13"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="11dp" />
+        android:layout_below="@+id/textView11"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText10"
+        android:layout_marginLeft="10dp"
+        android:text="E-mail:"
+        android:textSize="15dp" />
+
 
     <EditText
         android:id="@+id/editText12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/legendaEmail"
-        android:layout_marginTop="13dp"
-        android:layout_below="@+id/editText10"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView9"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editText12"
+        android:layout_marginLeft="10dp"
+        android:text="Senha:"
+        android:textSize="15dp" />
 
     <EditText
         android:id="@+id/editText13"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView21"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/legendaSenha"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/editText12"
-        android:layout_alignParentStart="true" />
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentStart="true"
+        android:text="Repita a Senha:"
+        android:textSize="15dp"
+        android:layout_below="@+id/editText13"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView23" />
 
     <EditText
         android:id="@+id/editText14"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/legendaRepitaSenha"
         android:layout_below="@+id/editText13"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="11dp" />
+        android:layout_alignParentStart="true" />
 
-    <Button
+       <Button
         android:id="@+id/button13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
-        android:layout_marginEnd="16dp"
+           android:layout_marginEnd="23dp"
+        android:layout_marginLeft="10dp"
         android:text="@string/legendaCadastrar"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
+           android:layout_below="@+id/editText14"
+           android:layout_alignParentEnd="true"
+           android:layout_marginTop="64dp" />
 
     <Button
-        android:onClick="VoltarTelaLogin"
         android:id="@+id/button14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/button13"
-        android:layout_marginStart="18dp"
-        android:text="@string/legendaCancelar" />
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="10dp"
+        android:onClick="VoltarTelaLogin"
+        android:text="@string/legendaCancelar"
+        android:layout_alignBaseline="@+id/button13"
+        android:layout_alignBottom="@+id/button13"
+        android:layout_alignStart="@+id/textView23" />
 
 </RelativeLayout>

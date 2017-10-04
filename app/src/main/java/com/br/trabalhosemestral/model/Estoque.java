@@ -90,7 +90,7 @@ public class Estoque extends Activity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
                 builder.setTitle("Atenção!");
-                builder.setMessage("Deseja remover ingrediente?");
+                builder.setMessage("Deseja remover ?");
                 builder.setCancelable(true);
 
                 builder.setPositiveButton("Sim", null);

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/textView28"
@@ -9,6 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
         android:text="Produção"
         android:textAlignment="center"
         android:textColor="@android:color/black"
@@ -19,12 +21,12 @@
         android:id="@+id/textView22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="62dp"
-        android:text="01"
-        android:textSize="18sp"
         android:layout_alignBaseline="@+id/textView18"
         android:layout_alignBottom="@+id/textView18"
-        android:layout_toStartOf="@+id/button6" />
+        android:layout_marginEnd="62dp"
+        android:layout_toStartOf="@+id/button6"
+        android:text="01"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/textView20"
@@ -40,11 +42,11 @@
         android:id="@+id/button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Comprar"
-        android:textSize="12sp"
-        android:layout_below="@+id/textView17"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="21dp" />
+        android:layout_below="@+id/textView17"
+        android:layout_marginEnd="21dp"
+        android:text="Comprar"
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/textView15"
@@ -76,14 +78,14 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView28"
         android:layout_marginStart="12dp"
         android:layout_marginTop="18dp"
         android:text="Produto:"
         android:textColor="@android:color/black"
         android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_below="@+id/textView28"
-        android:layout_alignParentStart="true" />
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editText3"
@@ -113,12 +115,12 @@
         android:id="@+id/editText5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editText3"
+        android:layout_below="@+id/editText3"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="0001"
-        android:textAlignment="center"
-        android:layout_below="@+id/editText3"
-        android:layout_alignStart="@+id/editText3" />
+        android:textAlignment="center" />
 
     <EditText
         android:id="@+id/editText8"
@@ -146,53 +148,53 @@
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/textView20"
         android:layout_marginEnd="39dp"
+        android:layout_toStartOf="@+id/button6"
         android:lineSpacingExtra="8sp"
         android:text="Estoque:"
         android:textColor="@android:color/black"
         android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_above="@+id/textView20"
-        android:layout_toStartOf="@+id/button6" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView20"
+        android:layout_below="@+id/button6"
         android:layout_marginTop="16dp"
         android:text="Componente 2"
-        android:textSize="18sp"
-        android:layout_below="@+id/button6"
-        android:layout_alignStart="@+id/textView20" />
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="01"
-        android:textSize="18sp"
         android:layout_above="@+id/textView18"
+        android:layout_alignEnd="@+id/textView22"
         android:layout_toStartOf="@+id/textView22"
-        android:layout_alignEnd="@+id/textView22" />
+        android:text="01"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Comprar"
-        android:textSize="12sp"
+        android:layout_alignStart="@+id/button6"
         android:layout_below="@+id/button6"
-        android:layout_alignStart="@+id/button6" />
+        android:text="Comprar"
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/textView24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Componente 3"
-        android:textSize="18sp"
         android:layout_alignBaseline="@+id/button8"
         android:layout_alignBottom="@+id/button8"
-        android:layout_alignStart="@+id/textView18" />
+        android:layout_alignStart="@+id/textView18"
+        android:text="Componente 3"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/textView25"
@@ -207,29 +209,29 @@
         android:id="@+id/button8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Comprar"
-        android:textSize="12sp"
+        android:layout_alignStart="@+id/button5"
         android:layout_below="@+id/button5"
-        android:layout_alignStart="@+id/button5" />
+        android:text="Comprar"
+        android:textSize="12sp" />
 
     <Button
         android:id="@+id/button9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/legendaSair"
         android:layout_alignBottom="@+id/button10"
-        android:layout_alignStart="@+id/textView24" />
+        android:layout_alignStart="@+id/textView24"
+        android:text="@string/legendaSair" />
 
     <Button
         android:id="@+id/button10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/button8"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="14dp"
         android:elevation="21dp"
         android:text="Produzir"
         android:textAlignment="center"
-        android:textSize="30sp"
-        android:layout_marginBottom="14dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/button8" />
+        android:textSize="30sp" />
 
 </RelativeLayout>

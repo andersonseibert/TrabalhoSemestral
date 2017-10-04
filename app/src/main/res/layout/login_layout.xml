@@ -100,13 +100,13 @@
         android:text="© All rights reserved"
         android:textColor="?attr/actionMenuTextColor" />
 
-    <TextView
+    <Button
         android:id="@+id/textView27"
+        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/buttonIniciar"
+        android:layout_alignEnd="@+id/textView3"
         android:layout_below="@+id/edtSenha"
-        android:layout_marginTop="17dp"
         android:onClick="AbrirCadastroUsuario"
         android:text="Novo usuário"
         android:textColor="@android:color/holo_blue_dark" />

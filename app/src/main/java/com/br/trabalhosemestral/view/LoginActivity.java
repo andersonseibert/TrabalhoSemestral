@@ -47,8 +47,9 @@ public class LoginActivity extends Activity {
     }
 
     public void AbrirCadastroUsuario(View view){
-        Intent intent = new Intent(getApplicationContext(), CadastroUsuarioActivity.class);
-        startActivity(intent);
+        Intent intent2 = new Intent(getApplicationContext(), CadastroUsuarioActivity.class);
+        startActivity(intent2);
     }
+
 
 }
