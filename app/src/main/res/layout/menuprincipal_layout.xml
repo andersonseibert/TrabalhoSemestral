@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|top">
+
+
+    <Button
+        android:id="@+id/btnProdutos"
+        android:layout_width="wrap_content"
+        android:gravity="bottom|center"
+        android:textStyle="bold"
+        android:layout_height="200sp"
+        android:width="200sp"
+        android:textSize="30sp"
+        android:background="@mipmap/ic_produzir"
+        android:text="produtos" />
+
+    <Button
+        android:layout_toRightOf="@+id/btnProdutos"
+        android:id="@+id/btnProduzir"
+        android:layout_width="wrap_content"
+        android:gravity="bottom|center"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_height="200sp"
+        android:width="200sp"
+        android:background="@mipmap/ic_produzir"
+        android:text="produção" />
+
+    <Button
+        android:layout_below="@+id/btnProduzir"
+        android:id="@+id/btnUsuarios"
+        android:layout_width="wrap_content"
+        android:gravity="bottom|center"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_height="200sp"
+        android:width="200sp"
+        android:background="@mipmap/ic_produzir"
+        android:text="opção" />
+
+</RelativeLayout>

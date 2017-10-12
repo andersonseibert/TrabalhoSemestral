@@ -14,7 +14,7 @@
         android:text="@string/legendaCadastroUsuario"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="@android:color/black"
+        android:textColor="@color/colorBranco"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -26,6 +26,8 @@
         android:layout_below="@+id/textView13"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="30dp"
+        android:textColor="@color/colorBranco"
+        android:textStyle="bold"
         android:text="Nome de Usuário:"
         android:textSize="15dp" />
 
@@ -42,6 +44,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editText10"
+        android:textColor="@color/colorBranco"
+        android:textStyle="bold"
         android:layout_marginLeft="10dp"
         android:text="E-mail:"
         android:textSize="15dp" />
@@ -61,6 +65,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/editText12"
+        android:textColor="@color/colorBranco"
+        android:textStyle="bold"
         android:layout_marginLeft="10dp"
         android:text="Senha:"
         android:textSize="15dp" />
@@ -80,6 +86,8 @@
         android:layout_marginLeft="10dp"
         android:layout_alignParentStart="true"
         android:text="Repita a Senha:"
+        android:textColor="@color/colorBranco"
+        android:textStyle="bold"
         android:textSize="15dp"
         android:layout_below="@+id/editText13"
         android:layout_centerHorizontal="true"
@@ -101,12 +109,14 @@
            android:layout_marginEnd="23dp"
         android:layout_marginLeft="10dp"
         android:text="@string/legendaCadastrar"
+           android:textStyle="bold"
            android:layout_below="@+id/editText14"
            android:layout_alignParentEnd="true"
            android:layout_marginTop="64dp" />
 
     <Button
         android:id="@+id/button14"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
