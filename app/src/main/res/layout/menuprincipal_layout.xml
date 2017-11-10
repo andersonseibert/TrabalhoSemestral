@@ -2,31 +2,30 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center|top">
-
+    android:gravity="center|center_horizontal">
 
     <Button
         android:id="@+id/btnProdutos"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="120sp"
+        android:width="180sp"
         android:gravity="bottom|center"
-        android:textStyle="bold"
-        android:layout_height="200sp"
-        android:width="200sp"
-        android:textSize="30sp"
-        android:background="@mipmap/ic_produzir"
-        android:text="produtos" />
+        android:text="Cadastro de Produtos"
+        android:textColor="@color/colorBranco"
+        android:textSize="22sp"
+        android:textStyle="bold" />
 
     <Button
-        android:layout_toRightOf="@+id/btnProdutos"
         android:id="@+id/btnProduzir"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="120sp"
+        android:layout_below="@id/btnProdutos"
+        android:width="180sp"
         android:gravity="bottom|center"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:layout_height="200sp"
-        android:width="200sp"
-        android:background="@mipmap/ic_produzir"
-        android:text="produção" />
+        android:text="Produção"
+        android:textSize="22sp"
+        android:textColor="@color/colorBranco"
+        android:textStyle="bold" />
 
     <Button
         android:layout_below="@+id/btnProduzir"
@@ -34,10 +33,24 @@
         android:layout_width="wrap_content"
         android:gravity="bottom|center"
         android:textStyle="bold"
-        android:textSize="30sp"
-        android:layout_height="200sp"
+        android:textSize="22sp"
+        android:layout_height="150sp"
+        android:textColor="@color/colorBranco"
         android:width="200sp"
-        android:background="@mipmap/ic_produzir"
-        android:text="opção" />
+        android:text="Meus Dados" />
+
+    <Button
+        android:layout_toRightOf="@id/btnUsuarios"
+        android:layout_below="@id/btnProduzir"
+        android:id="@+id/btnSair"
+        android:layout_width="wrap_content"
+        android:gravity="bottom|center"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_height="150sp"
+        android:textColor="@color/colorBranco"
+        android:width="200sp"
+        android:onClick="FinalizarAplicacao"
+        android:text="Sair" />
 
 </RelativeLayout>

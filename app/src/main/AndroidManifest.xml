@@ -8,21 +8,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/EstiloTelaLogin">
-        <activity android:name="com.br.trabalhosemestral.view.LoginActivity">
+        <activity android:name="br.com.trabalhosemestral.activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.br.trabalhosemestral.view.CadastroUsuarioActivity" />
+        <activity android:name="br.com.trabalhosemestral.activity.CadastroUsuarioActivity" />
         <activity
-            android:name="com.br.trabalhosemestral.view.MenuActivity"
+            android:name="br.com.trabalhosemestral.activity.MenuActivity"
             android:label="@string/title_activity_menu"
-            android:theme="@style/EstiloAplicativo.NoActionBar">
+            android:theme="@style/EstiloTelaLogin">
 
         </activity>
-        <activity android:name="com.br.trabalhosemestral.model.Estoque">
+        <activity android:name="br.com.trabalhosemestral.activity.ProdutoActivity">
 
         </activity>
 
