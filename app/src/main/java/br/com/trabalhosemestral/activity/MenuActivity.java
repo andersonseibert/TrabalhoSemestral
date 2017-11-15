@@ -15,12 +15,26 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.menuprincipal_layout);
     }
 
-    public void abreTelaEstoque(View view) {
-        Intent intent = new Intent(getBaseContext(), ProdutoActivity.class);
+    public void AbreCadastroProdutos(View view) {
+        Intent intent = new Intent(getBaseContext(), CadastroProdutoActivity.class);
         startActivity(intent);
     }
 
-    public void FinalizarAplicacao(View view){
+    public void ListaCadastrados(View view) {
+        Intent intent = new Intent(getBaseContext(), ProdutosCadastradosActivity.class);
+        startActivity(intent);
+    }
+    public void ProduzirProdutos(View view) {
+        Intent intent = new Intent(getBaseContext(), ProducaoActivity.class);
+        startActivity(intent);
+    }
+
+    public void ListaProduzidos(View view) {
+        Intent intent = new Intent(getBaseContext(), ProducaoListaActivity.class);
+        startActivity(intent);
+    }
+
+    public void FinalizarAplicacao(View view) {
         finish();
     }
 }

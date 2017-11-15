@@ -2,33 +2,63 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center|center_horizontal">
+    android:gravity="center_horizontal">
+
 
     <Button
-        android:id="@+id/btnProdutos"
+        android:id="@+id/btnCadastroProdutos"
         android:layout_width="match_parent"
-        android:layout_height="120sp"
+        android:layout_height="100sp"
         android:width="180sp"
         android:gravity="bottom|center"
         android:text="Cadastro de Produtos"
         android:textColor="@color/colorBranco"
-        android:textSize="22sp"
-        android:textStyle="bold" />
+        android:textSize="20sp"
+        android:onClick="AbreCadastroProdutos"
+        android:textStyle="bold"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:id="@+id/btnProdutos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:width="180sp"
+        android:gravity="bottom|center"
+        android:text="Produtos Cadastrados"
+        android:textColor="@color/colorBranco"
+        android:textSize="20sp"
+        android:onClick="ListaCadastrados"
+        android:textStyle="bold"
+        android:layout_below="@+id/btnCadastroProdutos"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/btnProduzir"
         android:layout_width="match_parent"
-        android:layout_height="120sp"
-        android:layout_below="@id/btnProdutos"
+        android:layout_height="100sp"
         android:width="180sp"
         android:gravity="bottom|center"
-        android:text="Produção"
-        android:textSize="22sp"
+        android:text="Produzir"
+        android:textSize="20sp"
         android:textColor="@color/colorBranco"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:onClick="ProduzirProdutos"
+        android:layout_below="@+id/btnProdutos"
+        android:layout_alignParentStart="true" />
 
     <Button
+        android:id="@+id/btnProduzidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:width="180sp"
+        android:gravity="bottom|center"
+        android:text="Produzidos"
+        android:textSize="20sp"
+        android:textColor="@color/colorBranco"
+        android:textStyle="bold"
         android:layout_below="@+id/btnProduzir"
+        android:onClick="ListaProduzidos"
+        android:layout_alignParentStart="true" />
+    <Button
         android:id="@+id/btnUsuarios"
         android:layout_width="wrap_content"
         android:gravity="bottom|center"
@@ -37,11 +67,13 @@
         android:layout_height="150sp"
         android:textColor="@color/colorBranco"
         android:width="200sp"
-        android:text="Meus Dados" />
+        android:text="Meus Dados"
+        android:layout_below="@+id/btnProduzidos"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:layout_toStartOf="@+id/btnSair" />
 
     <Button
-        android:layout_toRightOf="@id/btnUsuarios"
-        android:layout_below="@id/btnProduzir"
         android:id="@+id/btnSair"
         android:layout_width="wrap_content"
         android:gravity="bottom|center"
@@ -51,6 +83,8 @@
         android:textColor="@color/colorBranco"
         android:width="200sp"
         android:onClick="FinalizarAplicacao"
-        android:text="Sair" />
+        android:text="Sair"
+        android:layout_alignBottom="@+id/btnUsuarios"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

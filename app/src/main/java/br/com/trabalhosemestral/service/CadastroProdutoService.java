@@ -1,15 +1,13 @@
 package br.com.trabalhosemestral.service;
 
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.List;
 
-import br.com.trabalhosemestral.model.Producao;
 import br.com.trabalhosemestral.model.Produto;
 
-public class ProdutoService {
+public class CadastroProdutoService {
 
     public void Inserir(Produto produto){
 

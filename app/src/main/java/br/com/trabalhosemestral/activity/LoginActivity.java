@@ -22,8 +22,8 @@ public class LoginActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.login_layout);
-        setContentView(R.layout.produtos_layout);
+        setContentView(R.layout.login_layout);
+//        setContentView(R.layout.cadastro_produtos_layout);
         edtLogin = (EditText)findViewById(R.id.edtLogin);
         edtSenha = (EditText)findViewById(R.id.edtSenha);
     }

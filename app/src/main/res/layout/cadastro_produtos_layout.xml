@@ -116,6 +116,7 @@
         android:textColor="@color/colorBranco"
         android:textStyle="bold"
         android:layout_marginLeft="10dp"
+        android:onClick="Cancelar"
         android:text="Cancelar" />
 
     <Button

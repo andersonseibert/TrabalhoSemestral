@@ -22,9 +22,12 @@
             android:theme="@style/EstiloTelaLogin">
 
         </activity>
-        <activity android:name="br.com.trabalhosemestral.activity.ProdutoActivity">
+        <activity android:name="br.com.trabalhosemestral.activity.CadastroProdutoActivity"></activity>
+        <activity android:name="br.com.trabalhosemestral.activity.ProdutosCadastradosActivity"></activity>
+        <activity android:name="br.com.trabalhosemestral.activity.ProducaoActivity"></activity>
+        <activity android:name="br.com.trabalhosemestral.activity.ProducaoListaActivity"></activity>
 
-        </activity>
+
 
     </application>
 

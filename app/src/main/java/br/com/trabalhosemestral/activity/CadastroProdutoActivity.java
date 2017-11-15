@@ -22,7 +22,7 @@ import br.com.ajm.prototipo.prototipotelas.R;
  * Created by rossi on 04/10/2017.
  */
 
-public class ProdutoActivity extends Activity {
+public class CadastroProdutoActivity extends Activity {
 
     private ArrayList<String> arrayList;
     private ArrayAdapter<String> adapter;
@@ -33,11 +33,11 @@ public class ProdutoActivity extends Activity {
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        setContentView(R.layout.produtos_layout);
+        setContentView(R.layout.cadastro_produtos_layout);
         final ListView listView = (ListView) findViewById(R.id.listv);
 
         arrayList = new ArrayList<>();
-        adapter = new ArrayAdapter<String>(ProdutoActivity.this, android.R.layout.simple_expandable_list_item_1, arrayList);
+        adapter = new ArrayAdapter<String>(CadastroProdutoActivity.this, android.R.layout.simple_expandable_list_item_1, arrayList);
         listView.setAdapter(adapter);
         registerForContextMenu(listView);
         editText9 = (EditText) findViewById(R.id.editText9);
@@ -109,5 +109,10 @@ public class ProdutoActivity extends Activity {
 //                dialog.show();
         }
         return true;
+    }
+
+    public void Cancelar(View view) {
+        finish();
+
     }
 }

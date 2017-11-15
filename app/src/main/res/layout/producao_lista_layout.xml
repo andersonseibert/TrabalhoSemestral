@@ -28,6 +28,7 @@
         android:layout_marginStart="11dp"
         android:textColor="@color/colorBranco"
         android:textStyle="bold"
+        android:onClick="Voltar"
         android:layout_marginLeft="10dp"
         android:text="Voltar" />
 
@@ -41,7 +42,8 @@
         android:layout_marginLeft="10dp"
         android:textColor="@color/colorBranco"
         android:textStyle="bold"
-        android:text="Novo" />
+        android:onClick="ProduzirProdutos"
+        android:text="Produzir" />
 
 
     <ListView

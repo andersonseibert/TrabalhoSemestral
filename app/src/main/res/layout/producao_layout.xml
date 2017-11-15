@@ -54,6 +54,7 @@
         android:textColor="@color/colorBranco"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:onClick="Sair"
         android:layout_alignBaseline="@+id/button10"
         android:layout_alignBottom="@+id/button10"
         android:layout_alignStart="@+id/tabHost" />
