@@ -23,7 +23,7 @@ public class UsuarioService {
 
         try {
 
-            object.put("codigo", usuario.getCodigo() );
+
             object.put("email", usuario.getUsu_email() );
 
             httpResult = restUtil.processRequest(JSON_URI, "POST", object.toString() );
