@@ -3,40 +3,44 @@ package br.com.trabalhosemestral.model;
 
 
 public class Usuario {
-    private int codigo;
-    private String usu_email;
-    private String usu_senha;
 
-    public Usuario() {
-    }
 
-    public Usuario(int codigo, String usu_email, String usu_senha) {
-        this.codigo = codigo;
-        this.usu_email = usu_email;
-        this.usu_senha = usu_senha;
-    }
+    private String email;
+    private String senha;
+    private String nome;
 
-    public int getCodigo() {
-        return codigo;
-    }
 
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
+
+    public Usuario(String usu_email, String usu_senha, String nome) {
+        this.email = usu_email;
+        this.senha = usu_senha;
+        this.nome = nome;
     }
 
     public String getUsu_email() {
-        return usu_email;
+        return email;
     }
 
     public void setUsu_email(String usu_email) {
-        this.usu_email = usu_email;
+        this.email = usu_email;
     }
 
     public String getUsu_senha() {
-        return usu_senha;
+        return senha;
     }
 
     public void setUsu_senha(String usu_senha) {
-        this.usu_senha = usu_senha;
+        this.senha = usu_senha;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Usuario() {
     }
 }

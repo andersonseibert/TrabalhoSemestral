@@ -10,8 +10,7 @@ public class Produto {
     public Produto() {
     }
 
-    public Produto(int id, String nome_produto, double quantidade_desejada) {
-        this.id = id;
+    public Produto(String nome_produto, double quantidade_desejada) {
         this.nome_produto = nome_produto;
         this.quantidade_desejada = quantidade_desejada;
     }
