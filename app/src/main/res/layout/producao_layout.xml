@@ -18,132 +18,39 @@
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorBranco"
-        android:textStyle="bold"
-        android:text="Verificar componentes"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textSize="18sp"
-        android:layout_marginTop="18dp"
-        android:layout_below="@+id/textView12"
-        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView28"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="18dp"
-        android:text="Produto:"
+        android:textAlignment="center"
+        android:layout_marginTop="62dp"
+        android:text="Produtos Aptos a Produzir:"
         android:textColor="@color/colorBranco"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_below="@+id/textView28"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/button9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:elevation="17dp"
         android:text="@string/legendaSair"
         android:textColor="@color/colorBranco"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:layout_marginLeft="10dp"
         android:onClick="Sair"
-        android:layout_alignBaseline="@+id/button10"
-        android:layout_alignBottom="@+id/button10"
-        android:layout_alignStart="@+id/tabHost" />
+        android:layout_below="@+id/textView28"
+        android:layout_alignParentStart="true" />
 
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="14dp"
-        android:elevation="17dp"
-        android:text="Produzir"
-        android:textAlignment="center"
-        android:textColor="@color/colorBranco"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/tabHost" />
-
-    <TextView
-        android:id="@+id/textView14"
+    <ListView
+        android:id="@+id/listv_Cadastrados"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView12"
-        android:layout_toEndOf="@+id/button9"
-        android:text="TextView"
-        android:textColor="@color/colorBranco"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <TabHost
-        android:layout_width="360dip"
-        android:layout_height="300dip"
-        android:layout_marginTop="22dp"
-        android:layout_below="@+id/textView10"
-        android:layout_alignStart="@+id/textView12"
-        android:id="@+id/tabHost">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:textStyle="bold">
-
-            <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:textSize="13sp"
-                android:textColor="@color/colorBranco"
-                android:orientation="horizontal"
-                />
-
-            <FrameLayout
-                android:id="@android:id/tabcontent"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:id="@+id/ID"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/Comp."
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/Est."
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/Compra"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                </LinearLayout>
-            </FrameLayout>
-        </LinearLayout>
-    </TabHost>
+        android:layout_height="match_parent"
+        android:layout_alignStart="@+id/button9"
+        android:layout_below="@+id/textView12"
+        android:layout_marginTop="13dp" />
 
 </RelativeLayout>

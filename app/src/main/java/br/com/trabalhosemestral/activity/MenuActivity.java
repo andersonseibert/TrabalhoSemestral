@@ -33,6 +33,10 @@ public class MenuActivity extends AppCompatActivity {
         Intent intent = new Intent(getBaseContext(), ProducaoListaActivity.class);
         startActivity(intent);
     }
+    public void AbrirCadastroUsuario(View view){
+        Intent intent2 = new Intent(getApplicationContext(), CadastroUsuarioActivity.class);
+        startActivity(intent2);
+    }
 
     public void FinalizarAplicacao(View view) {
         finish();
