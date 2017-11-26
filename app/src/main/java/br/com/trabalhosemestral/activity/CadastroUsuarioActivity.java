@@ -7,9 +7,11 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import br.com.ajm.prototipo.prototipotelas.R;
 import br.com.trabalhosemestral.model.Usuario;
+import br.com.trabalhosemestral.service.ProdutoService;
 import br.com.trabalhosemestral.service.UsuarioService;
 
 /**
@@ -35,6 +37,7 @@ public class CadastroUsuarioActivity extends Activity {
     }
 
     public void VoltarTelaLogin(View view) {
+
         finish();
     }
 
@@ -63,14 +66,9 @@ public class CadastroUsuarioActivity extends Activity {
                     @Override
                     protected void onPostExecute(String s) {
                         super.onPostExecute(s);
-
-                        //AbrirMenuPrincipal(view);
-//        if (login.equals("admin") && senha.equals("admin")) {
-//
-//        } else {
-//            Toast.makeText(this, "Login ou Senha Incorreto", Toast.LENGTH_LONG).show();
-//            return;
-//        }
+                        if (s.equals("OK")) {
+                            Toast.makeText(getBaseContext(), "Usuario Cadastrado com Sucesso.", Toast.LENGTH_LONG).show();
+                        }
                     }
                 };
         tarefa.execute();
