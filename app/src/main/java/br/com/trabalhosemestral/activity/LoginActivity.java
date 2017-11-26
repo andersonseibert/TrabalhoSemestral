@@ -37,32 +37,38 @@ public class LoginActivity extends Activity {
 
         final String login = edtLogin.getText().toString();
         final String senha = edtSenha.getText().toString();
+        AbrirMenuPrincipal(view);
+        if (login.equals("admin") && senha.equals("admin")) {
 
-        AsyncTask<String, Object, String> tarefa =
-                new AsyncTask<String, Object, String>() {
-                    @Override
-                    protected String doInBackground(String... params) {
-
-                        Usuario usuario = new Usuario(login, senha, null);
-                        UsuarioService service = new UsuarioService();
-                        service.EfetuarLogin(usuario);
-                        return "OK";
-                    }
-
-                    @Override
-                    protected void onPostExecute(String s) {
-                        super.onPostExecute(s);
-
-                        //AbrirMenuPrincipal(view);
-//        if (login.equals("admin") && senha.equals("admin")) {
+        } else {
+            Toast.makeText(this, "Login ou Senha Incorreto", Toast.LENGTH_LONG).show();
+            return;
+        }
+//        AsyncTask<String, Object, String> tarefa =
+//                new AsyncTask<String, Object, String>() {
+//                    @Override
+//                    protected String doInBackground(String... params) {
 //
-//        } else {
-//            Toast.makeText(this, "Login ou Senha Incorreto", Toast.LENGTH_LONG).show();
-//            return;
-//        }
-                    }
-                };
-        tarefa.execute();
+//                        Usuario usuario = new Usuario(login, senha, null);
+//                        UsuarioService service = new UsuarioService();
+//                        service.EfetuarLogin(usuario);
+//                        return "OK";
+//                    }
+//
+//                    @Override
+//                    protected void onPostExecute(String s) {
+//                        super.onPostExecute(s);
+//
+//                        //AbrirMenuPrincipal(view);
+////        if (login.equals("admin") && senha.equals("admin")) {
+////
+////        } else {
+////            Toast.makeText(this, "Login ou Senha Incorreto", Toast.LENGTH_LONG).show();
+////            return;
+////        }
+//                    }
+//                };
+//        tarefa.execute();
     }
 
     public void AbrirMenuPrincipal(View view) {

@@ -8,12 +8,13 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.trabalhosemestral.model.Global;
 import br.com.trabalhosemestral.model.Produto;
 
-public class CadastroProdutoService {
+public class ProdutoService {
     RESTUtil restUtil = new RESTUtil();
     private String httpResult;
-    private String JSON_URI = "http://10.0.2.2:80/mydrink/api/produto";
+    private String JSON_URI = Global.caminho_api + "produto";
 
 
     public void Inserir(Produto produto) {
@@ -46,17 +47,21 @@ public class CadastroProdutoService {
 
     }
 
+    public void FazerRequisicaoListarTodos() {
+        this.httpResult = restUtil.processRequest(JSON_URI, "GET", "");
+    }
+
     public List<Produto> ListarTodos() {
         List<Produto> produtosList = new ArrayList<>();
-        this.httpResult = restUtil.processRequest(JSON_URI, "GET", "");
         if (this.httpResult != null) {
             try {
-                JSONArray usuarios = new JSONArray(this.httpResult);
-
-                for (int i = 0; i < usuarios.length(); i++) {
-                    JSONObject produto = usuarios.getJSONObject(i);
+                JSONArray produtosRetorno = new JSONArray(this.httpResult);
+                for (int i = 0; i < produtosRetorno.length(); i++) {
+                    JSONObject produto = produtosRetorno.getJSONObject(i);
                     Produto u = new Produto();
+                    u.setId(produto.getInt("id"));
                     u.setNome_produto(produto.getString("nome_produto"));
+                    u.setQuantidade_desejada(produto.getDouble("quantidade_desejada"));
                     produtosList.add(u);
                 }
             } catch (JSONException e) {

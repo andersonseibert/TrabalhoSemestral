@@ -7,6 +7,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.trabalhosemestral.model.Global;
 import br.com.trabalhosemestral.model.Usuario;
 
 public class UsuarioService {
@@ -15,9 +16,9 @@ public class UsuarioService {
 
 
     private String httpResult;
-    private String JSON_URI = "http://localhost:8081/MyDrink/api/usuario";
+    private String JSON_URI = Global.caminho_api + "usuario";
 
-    public void SalvarUsuario(Usuario usuario) {
+    public void InserirUsuario(Usuario usuario) {
         JSONObject object = new JSONObject();
 
         try {
@@ -36,7 +37,6 @@ public class UsuarioService {
 
     public List<Usuario> ListarTodos() {
         List<Usuario> usuariosList = new ArrayList<>();
-
         if (this.httpResult != null) {
             try {
                 JSONArray usuarios = new JSONArray(this.httpResult);

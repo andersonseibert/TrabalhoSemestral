@@ -56,8 +56,7 @@ public class CadastroUsuarioActivity extends Activity {
                     protected String doInBackground(String... params) {
 
                         Usuario usuario = new Usuario(login, senha, nome);
-                        service.SalvarUsuario(usuario);
-
+                        service.InserirUsuario(usuario);
                         return "OK";
                     }
 
