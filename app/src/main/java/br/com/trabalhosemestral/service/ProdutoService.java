@@ -21,6 +21,7 @@ public class ProdutoService {
         JSONObject object = new JSONObject();
         try {
             object.put("nome_produto", produto.getNome_produto());
+            object.put("descricao_produto", produto.getDescricao_produto());
             object.put("quantidade_desejada", 0);
             httpResult = restUtil.processRequest(JSON_URI, "POST", object.toString());
         } catch (JSONException e) {
@@ -32,6 +33,7 @@ public class ProdutoService {
         JSONObject object = new JSONObject();
         try {
             object.put("nome_produto", produto.getNome_produto());
+            object.put("descricao_produto", produto.getDescricao_produto());
             object.put("quantidade_desejada", produto.getQuantidade_desejada());
             httpResult = restUtil.processRequest(JSON_URI, "PUT", object.toString());
         } catch (JSONException e) {

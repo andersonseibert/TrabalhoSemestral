@@ -33,12 +33,15 @@ public class CadastroProdutoActivity extends Activity {
     private EditText editText9;
     private EditText editText11;
     private EditText edtNomeProduto;
+    private EditText edtDescricaoProduto;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cadastro_produtos_layout);
         edtNomeProduto = (EditText) findViewById(R.id.editText6);
+        edtDescricaoProduto = (EditText) findViewById(R.id.editText7);
     }
 
 //    @Override
@@ -128,6 +131,7 @@ public class CadastroProdutoActivity extends Activity {
     public void InserirProduto(View view) {
 
         final String nomeProduto = edtNomeProduto.getText().toString();
+        final String descricaoProduto = edtDescricaoProduto.getText().toString();
         final ProdutoService service = new ProdutoService();
 
         AsyncTask<String, Object, String> tarefa =
@@ -135,7 +139,7 @@ public class CadastroProdutoActivity extends Activity {
                 new AsyncTask<String, Object, String>() {
                     @Override
                     protected String doInBackground(String... params) {
-                        Produto produto = new Produto(nomeProduto, 0);
+                        Produto produto = new Produto(descricaoProduto, nomeProduto, 0);
                         service.Inserir(produto);
                         return "OK";
                     }

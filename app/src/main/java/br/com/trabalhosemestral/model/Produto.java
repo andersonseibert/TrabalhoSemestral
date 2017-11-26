@@ -1,18 +1,27 @@
 package br.com.trabalhosemestral.model;
 
 
-
 public class Produto {
     private int id;
     private String nome_produto;
+    private String descricao_produto;
     private double quantidade_desejada;
 
     public Produto() {
     }
 
-    public Produto(String nome_produto, double quantidade_desejada) {
+    public Produto(String descricao_produto, String nome_produto, double quantidade_desejada) {
+        this.descricao_produto = descricao_produto;
         this.nome_produto = nome_produto;
         this.quantidade_desejada = quantidade_desejada;
+    }
+
+    public String getDescricao_produto() {
+        return descricao_produto;
+    }
+
+    public void setDescricao_produto(String descricao_produto) {
+        this.descricao_produto = descricao_produto;
     }
 
     public int getId() {
