@@ -55,9 +55,8 @@ public class UsuarioService {
         return usuariosList;
     }
 
-    public void EfetuarLogin(Usuario usuario) {
+    public void processLogin(Usuario usuario) {
         JSONObject object = new JSONObject();
-
         try {
             object.put("email", usuario.getUsu_email());
             object.put("senha", usuario.getUsu_senha());
@@ -66,6 +65,15 @@ public class UsuarioService {
             String s = "";
         } catch (JSONException e) {
             e.printStackTrace();
+        }
+    }
+
+    public boolean EfetuarLogin() {
+        if (this.httpResult != null) {
+            boolean resultado = Boolean.parseBoolean(this.httpResult);
+            return resultado;
+        } else {
+            return false;
         }
     }
 }

@@ -13,9 +13,6 @@ import br.com.ajm.prototipo.prototipotelas.R;
 import br.com.trabalhosemestral.model.Usuario;
 import br.com.trabalhosemestral.service.UsuarioService;
 
-/**
- * Created by rossi on 13/09/2017.
- */
 
 public class LoginActivity extends Activity {
 
@@ -26,49 +23,41 @@ public class LoginActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_layout);
-//        setContentView(R.layout.cadastro_produtos_layout);
         edtLogin = (EditText) findViewById(R.id.edtLogin);
         edtSenha = (EditText) findViewById(R.id.edtSenha);
     }
 
-    public void FazerLogin(View view) {
+    public void FazerLogin(final View view) {
         edtLogin.setText("anderson@gmail.com");
         edtSenha.setText("123");
 
         final String login = edtLogin.getText().toString();
         final String senha = edtSenha.getText().toString();
-        AbrirMenuPrincipal(view);
-        if (login.equals("admin") && senha.equals("admin")) {
 
-        } else {
-            Toast.makeText(this, "Login ou Senha Incorreto", Toast.LENGTH_LONG).show();
-            return;
-        }
-//        AsyncTask<String, Object, String> tarefa =
-//                new AsyncTask<String, Object, String>() {
-//                    @Override
-//                    protected String doInBackground(String... params) {
-//
-//                        Usuario usuario = new Usuario(login, senha, null);
-//                        UsuarioService service = new UsuarioService();
-//                        service.EfetuarLogin(usuario);
-//                        return "OK";
-//                    }
-//
-//                    @Override
-//                    protected void onPostExecute(String s) {
-//                        super.onPostExecute(s);
-//
-//                        //AbrirMenuPrincipal(view);
-////        if (login.equals("admin") && senha.equals("admin")) {
-////
-////        } else {
-////            Toast.makeText(this, "Login ou Senha Incorreto", Toast.LENGTH_LONG).show();
-////            return;
-////        }
-//                    }
-//                };
-//        tarefa.execute();
+        final UsuarioService service = new UsuarioService();
+        AsyncTask<String, Object, String> tarefa =
+
+                new AsyncTask<String, Object, String>() {
+                    @Override
+                    protected String doInBackground(String... params) {
+                        Usuario usuario = new Usuario(login, senha, null);
+                        service.processLogin(usuario);
+                        return "OK";
+                    }
+
+                    @Override
+                    protected void onPostExecute(String s) {
+                        super.onPostExecute(s);
+                        boolean re = service.EfetuarLogin();
+                        if (re) {
+                            AbrirMenuPrincipal(view);
+                        } else {
+                            Toast.makeText(getBaseContext(), "Login ou Senha Incorreto", Toast.LENGTH_LONG).show();
+                            return;
+                        }
+                    }
+                };
+        tarefa.execute();
     }
 
     public void AbrirMenuPrincipal(View view) {
@@ -80,6 +69,4 @@ public class LoginActivity extends Activity {
         Intent intent2 = new Intent(getApplicationContext(), CadastroUsuarioActivity.class);
         startActivity(intent2);
     }
-
-
 }
