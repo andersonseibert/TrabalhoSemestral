@@ -5,9 +5,9 @@ Aplicativo para produção de Drinks, para utilizar é necessário utilizar a AP
 https://github.com/marcosdollis/MakeDrinkAPI
 
 ### Prerequisitos
-Android Studio = https://developer.android.com/studio/index.html?hl=pt-br
-Netbeans = https://netbeans.org/downloads/
-API = https://github.com/marcosdollis/MakeDrinkAPI
+* **Android Studio** = https://developer.android.com/studio/index.html?hl=pt-br
+* **Netbeans** = https://netbeans.org/downloads/
+* **API** = https://github.com/marcosdollis/MakeDrinkAPI
 
 ### Como Instalar
 
