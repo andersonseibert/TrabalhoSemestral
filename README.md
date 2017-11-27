@@ -11,12 +11,12 @@ https://github.com/marcosdollis/MakeDrinkAPI
 
 ### Como Instalar
 
-1->Baixar e instalar Android Studio
-2->Baixar e instalar Netbeans
-3->Clonar o projeto da API no Netbeans
-4->Clonar o projeto do aplicativo
-5->Iniciar a API
-6->Iniciar o Aplicativo
+* Baixar e instalar Android Studio
+* Baixar e instalar Netbeans
+* Clonar o projeto da API no Netbeans
+* Clonar o projeto do aplicativo
+* Iniciar a API
+* Iniciar o Aplicativo
 
 ## Autores
 
