@@ -8,9 +8,6 @@ import android.view.View;
 
 import br.com.ajm.prototipo.prototipotelas.R;
 
-/**
- * Created by rossi on 15/11/2017.
- */
 
 public class ProducaoListaActivity extends AppCompatActivity {
     @Override
