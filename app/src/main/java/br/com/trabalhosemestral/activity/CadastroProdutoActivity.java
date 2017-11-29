@@ -122,6 +122,16 @@ public class CadastroProdutoActivity extends Activity {
 
     public void InserirProduto(View view) {
 
+
+        if (edtDescricaoProduto.getText().length() == 0) {
+            edtDescricaoProduto.setError("Campo vazio");
+            return;
+        }
+        if (edtNomeProduto.getText().length() == 0) {
+            edtNomeProduto.setError("Campo vazio");
+            return;
+        }
+
         final String nomeProduto = edtNomeProduto.getText().toString();
         final String descricaoProduto = edtDescricaoProduto.getText().toString();
         final ProdutoService service = new ProdutoService();
@@ -142,6 +152,10 @@ public class CadastroProdutoActivity extends Activity {
                         if (s.equals("OK")) {
 
                             Toast.makeText(getBaseContext(), "Produto Cadastrado com Sucesso.", Toast.LENGTH_LONG).show();
+
+                            /*LIMPAR CAMPOS*/
+                            edtNomeProduto.setText("");
+                            edtDescricaoProduto.setText("");
                         }
 
                     }

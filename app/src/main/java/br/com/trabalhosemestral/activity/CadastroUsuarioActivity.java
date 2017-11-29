@@ -48,6 +48,20 @@ public class CadastroUsuarioActivity extends Activity {
 
     public void CadastrarUsuario(View view) {
 
+
+        if (edtNome.getText().length() == 0) {
+            edtNome.setError("Campo vazio");
+            return;
+        }
+        if (edtEmail.getText().length() == 0) {
+            edtEmail.setError("Campo vazio");
+            return;
+        }
+        if (edtSenha.getText().length() == 0) {
+            edtSenha.setError("Campo vazio");
+            return;
+        }
+
         final String nome = edtNome.getText().toString();
         final String login = edtEmail.getText().toString();
         final String senha = edtSenha.getText().toString();
