@@ -20,6 +20,16 @@ public class ProducaoService {
     public void Inserir(Producao producao) {
 
         JSONObject object = new JSONObject();
+        try {
+            object.put("ordem_producao", producao.getProduto_cod());
+            object.put("produto_cod", producao.getProduto_cod());
+            object.put("quantidade", producao.getQuantidade());
+            object.put("data_criacao", "");
+
+            httpResult = restUtil.processRequest(JSON_URI, "POST", object.toString());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
     }
 

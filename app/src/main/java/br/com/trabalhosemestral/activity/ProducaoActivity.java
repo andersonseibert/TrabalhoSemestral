@@ -16,9 +16,12 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import br.com.ajm.prototipo.prototipotelas.R;
+import br.com.trabalhosemestral.model.Producao;
 import br.com.trabalhosemestral.model.Produto;
+import br.com.trabalhosemestral.service.ProducaoService;
 import br.com.trabalhosemestral.service.ProdutoService;
 
 /**
@@ -115,12 +118,16 @@ public class ProducaoActivity extends AppCompatActivity {
         campoDeTextoNoDialogo.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
         builder.setView(campoDeTextoNoDialogo);
 
-
+        final ProducaoService service = new ProducaoService();
         builder.setPositiveButton("Produzir", new DialogInterface.OnClickListener() {
 
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 String QuantidadeAProduzir = campoDeTextoNoDialogo.getText().toString();
+                int qtde = Integer.parseInt(QuantidadeAProduzir);
+                Random r = new Random();
+                Producao producao = new Producao(r.nextInt(), qtde, null, 1, 1);
+                service.Inserir(producao);
                 dialog.dismiss();
             }
         });
