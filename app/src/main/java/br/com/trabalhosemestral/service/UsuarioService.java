@@ -7,6 +7,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.trabalhosemestral.model.Global;
 import br.com.trabalhosemestral.model.Usuario;
 
 public class UsuarioService {
@@ -15,19 +16,16 @@ public class UsuarioService {
 
 
     private String httpResult;
+    private String JSON_URI = Global.caminho_api + "usuario";
 
-    private String JSON_URI ="http://10.0.2.2:80/0800mobile/api/usuario";
-
-    public void save(Usuario usuario) {
+    public void InserirUsuario(Usuario usuario) {
         JSONObject object = new JSONObject();
 
         try {
-
-
-            object.put("email", usuario.getUsu_email() );
-
-            httpResult = restUtil.processRequest(JSON_URI, "POST", object.toString() );
-
+            object.put("email", usuario.getUsu_email());
+            object.put("senha", usuario.getUsu_senha());
+            object.put("nome", usuario.getNome());
+            httpResult = restUtil.processRequest(JSON_URI, "POST", object.toString());
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -37,9 +35,8 @@ public class UsuarioService {
         this.httpResult = restUtil.processRequest(JSON_URI, "GET", "");
     }
 
-    public List<Usuario> findAll() {
+    public List<Usuario> ListarTodos() {
         List<Usuario> usuariosList = new ArrayList<>();
-
         if (this.httpResult != null) {
             try {
                 JSONArray usuarios = new JSONArray(this.httpResult);
@@ -58,4 +55,25 @@ public class UsuarioService {
         return usuariosList;
     }
 
+    public void processLogin(Usuario usuario) {
+        JSONObject object = new JSONObject();
+        try {
+            object.put("email", usuario.getUsu_email());
+            object.put("senha", usuario.getUsu_senha());
+            object.put("nome", "null");
+            httpResult = restUtil.processRequest(JSON_URI + "/login", "POST", object.toString());
+            String s = "";
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public boolean EfetuarLogin() {
+        if (this.httpResult != null) {
+            boolean resultado = Boolean.parseBoolean(this.httpResult);
+            return resultado;
+        } else {
+            return false;
+        }
+    }
 }

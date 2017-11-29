@@ -10,25 +10,25 @@ import br.com.trabalhosemestral.model.Producao;
 
 public class ProducaoService {
 
-    public void Inserir(Producao producao){
+    public void Inserir(Producao producao) {
 
         JSONObject object = new JSONObject();
 
     }
 
-    public void Alterar(Producao producao){
+    public void Alterar(Producao producao) {
 
     }
 
-    public void Excluir(int codigoProducao){
+    public void Excluir(int codigoProducao) {
 
     }
 
-    public void Buscar(int codigoProducao){
+    public void Buscar(int codigoProducao) {
 
     }
 
-    public List<Producao> ListarTodos(){
+    public List<Producao> ListarTodos() {
         return null;
     }
 }
