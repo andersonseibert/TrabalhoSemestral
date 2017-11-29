@@ -28,10 +28,6 @@ public class LoginActivity extends Activity {
     }
 
     public void FazerLogin(final View view) {
-        /*remover*/
-        edtLogin.setText("anderson@gmail.com");
-        edtSenha.setText("123");
-        /*remover*/
 
         if (edtLogin.getText().length() == 0) {
             edtLogin.setError("Campo vazio");

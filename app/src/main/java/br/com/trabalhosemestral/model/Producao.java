@@ -12,6 +12,9 @@ public class Producao {
     private Produto produto_cod;
     private Ingredientes ingrediente_cod;
 
+    public Producao() {
+    }
+
     public Producao(int ordem_producao, int protocolo, Date data_criacao, Produto produto_cod, Ingredientes ingrediente_cod) {
         this.ordem_producao = ordem_producao;
         this.protocolo = protocolo;
