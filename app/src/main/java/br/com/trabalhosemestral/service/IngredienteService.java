@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.trabalhosemestral.model.Global;
-import br.com.trabalhosemestral.model.Ingrediente;
+import br.com.trabalhosemestral.model.Ingredientes;
 
 public class IngredienteService {
     RESTUtil restUtil = new RESTUtil();
@@ -18,7 +18,7 @@ public class IngredienteService {
     private String JSON_URI = Global.caminho_api + "ingrediente";
 
 
-    public void Inserir(Ingrediente ingre) {
+    public void Inserir(Ingredientes ingre) {
         JSONObject object = new JSONObject();
         try {
             object.put("nome_ingrediente", ingre.getNome_ingrediente());
@@ -29,7 +29,7 @@ public class IngredienteService {
         }
     }
 
-    public void Alterar(Ingrediente ingre) {
+    public void Alterar(Ingredientes ingre) {
         JSONObject object = new JSONObject();
         try {
             object.put("nome_ingrediente", ingre.getNome_ingrediente());
@@ -40,7 +40,7 @@ public class IngredienteService {
         }
     }
 
-    public void Excluir(Ingrediente ingre) {
+    public void Excluir(Ingredientes ingre) {
 
         JSONObject object = new JSONObject();
         try {
@@ -62,14 +62,14 @@ public class IngredienteService {
         this.httpResult = restUtil.processRequest(JSON_URI, "GET", "");
     }
 
-    public List<Ingrediente> ListarTodos() {
-        List<Ingrediente> produtosList = new ArrayList<>();
+    public List<Ingredientes> ListarTodos() {
+        List<Ingredientes> produtosList = new ArrayList<>();
         if (this.httpResult != null) {
             try {
                 JSONArray produtosRetorno = new JSONArray(this.httpResult);
                 for (int i = 0; i < produtosRetorno.length(); i++) {
                     JSONObject produto = produtosRetorno.getJSONObject(i);
-                    Ingrediente u = new Ingrediente();
+                    Ingredientes u = new Ingredientes();
                     u.setId(produto.getInt("id"));
                     u.setNome_ingrediente(produto.getString("nome_ingrediente"));
                     u.setQuantidade_ingrediente_por_unidade(produto.getDouble("quantidade_ingrediente_por_unidade"));
