@@ -23,6 +23,7 @@ public class CadastroUsuarioActivity extends Activity {
     EditText edtNome;
     EditText edtEmail;
     EditText edtSenha;
+    EditText edtpass;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,7 +34,7 @@ public class CadastroUsuarioActivity extends Activity {
         edtNome = (EditText) findViewById(R.id.editText10);
         edtEmail = (EditText) findViewById(R.id.editText12);
         edtSenha = (EditText) findViewById(R.id.editText13);
-
+        edtpass = (EditText) findViewById(R.id.edtpass);
     }
 
     public void VoltarTelaLogin(View view) {
@@ -81,8 +82,19 @@ public class CadastroUsuarioActivity extends Activity {
                     protected void onPostExecute(String s) {
                         super.onPostExecute(s);
                         if (s.equals("OK")) {
+                            edtNome.setText("");
+                            edtEmail.setText("");
+                            edtSenha.setText("");
+                            edtpass.setText("");
+                            Intent i = new Intent(getBaseContext(), LoginActivity.class);
+                            startActivity(i);
                             Toast.makeText(getBaseContext(), "Usuario Cadastrado com Sucesso.", Toast.LENGTH_LONG).show();
+
+
                         }
+
+
+
                     }
                 };
         tarefa.execute();
