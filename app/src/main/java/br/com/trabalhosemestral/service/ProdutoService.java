@@ -41,9 +41,18 @@ public class ProdutoService {
         }
     }
 
-    public void Excluir(int codigoProduto) {
-
+    public void Excluir(Produto produto) {
+        JSONObject object = new JSONObject();
+        try {
+            object.put("nome_produto", produto.getNome_produto());
+            object.put("descricao_produto", produto.getDescricao_produto());
+            object.put("quantidade_desejada", produto.getQuantidade_desejada());
+            httpResult = restUtil.processRequest(JSON_URI, "DELETE", object.toString());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
+
 
     public void Buscar(int codigoProduto) {
 

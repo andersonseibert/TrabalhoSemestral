@@ -7,10 +7,10 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -29,6 +29,8 @@ public class ProdutosCadastradosActivity extends Activity {
     private ListView lvRegistros;
     ArrayAdapter<String> adaptador;
     final List<String> produtosDaLista = new ArrayList<String>();
+    private EditText edtNomeProduto;
+    private EditText edtDescricaoProduto;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -92,6 +94,31 @@ public class ProdutosCadastradosActivity extends Activity {
         String[] registro = produtosDaLista.get(posicao).split("-");
         int idProduto = Integer.parseInt(registro[0]);
 
+//        final String nomeProduto = edtNomeProduto.getText().toString();
+//        final String descricaoProduto = edtDescricaoProduto.getText().toString();
+//        final ProdutoService service = new ProdutoService();
+//
+//        AsyncTask<String, Object, String> tarefa =
+//
+//                new AsyncTask<String, Object, String>() {
+//                    @Override
+//                    protected String doInBackground(String... params) {
+//                        Produto produto = new Produto(descricaoProduto, nomeProduto, 0);
+//                        service.Excluir(produto);
+//                        return "OK";
+//                    }
+//
+//                    @Override
+//                    protected void onPostExecute(String s) {
+//                        super.onPostExecute(s);
+//                        if (s.equals("OK")) {
+//                            Toast.makeText(getBaseContext(), "Produto removido com Sucesso.", Toast.LENGTH_LONG).show();
+//                        }
+//
+//                    }
+//                };
+//        tarefa.execute();
+//
     }
 
     public void Produzir() {
@@ -109,6 +136,7 @@ public class ProdutosCadastradosActivity extends Activity {
 
 
     public void MostrarDialogo(final int posicaoItemLista) {
+
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Opções");
         builder.setMessage("O que deseja Fazer?");
@@ -128,10 +156,15 @@ public class ProdutosCadastradosActivity extends Activity {
             }
         });
         builder.setNegativeButton("Excluir", new DialogInterface.OnClickListener() {
+
+
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 ExcluirItem(posicaoItemLista);
+                produtosDaLista.remove(posicaoItemLista);
+                adaptador.notifyDataSetChanged();
                 dialog.dismiss();
+
             }
         });
         AlertDialog alert = builder.create();

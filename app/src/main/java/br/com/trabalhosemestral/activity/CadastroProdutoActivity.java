@@ -1,28 +1,20 @@
 package br.com.trabalhosemestral.activity;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.ContextMenu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
 import br.com.ajm.prototipo.prototipotelas.R;
 import br.com.trabalhosemestral.model.Produto;
-import br.com.trabalhosemestral.model.Usuario;
 import br.com.trabalhosemestral.service.ProdutoService;
-import br.com.trabalhosemestral.service.UsuarioService;
 
 
 public class CadastroProdutoActivity extends Activity {
@@ -94,35 +86,35 @@ public class CadastroProdutoActivity extends Activity {
         }
     }
 
-    @Override
-    public boolean onContextItemSelected(MenuItem item) {
-        final AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
-        switch (item.getItemId()) {
-            case 0:
-
-                AlertDialog.Builder builder = new AlertDialog.Builder(this);
-
-                builder.setTitle("Atenção!");
-                builder.setMessage("Deseja remover ?");
-                builder.setCancelable(true);
-
-                builder.setPositiveButton("Sim", null);
-                builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                        arrayList.remove(info.position);
-                        adapter.notifyDataSetChanged();
-                    }
-                })
-                        .setNegativeButton("Cancelar", null)
-                        .show();
-//                AlertDialog dialog=builder.create();
-//                dialog.show();
-        }
-        return true;
-    }
+//    @Override
+//    public boolean onContextItemSelected(MenuItem item) {
+//        final AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+//        switch (item.getItemId()) {
+//            case 0:
+//
+//                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//
+//                builder.setTitle("Atenção!");
+//                builder.setMessage("Deseja remover ?");
+//                builder.setCancelable(true);
+//
+//                builder.setPositiveButton("Sim", null);
+//                builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+//
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        dialog.dismiss();
+//                        arrayList.remove(info.position);
+//                        adapter.notifyDataSetChanged();
+//                    }
+//                })
+//                        .setNegativeButton("Cancelar", null)
+//                        .show();
+////                AlertDialog dialog=builder.create();
+////                dialog.show();
+//        }
+//        return true;
+//    }
 
     public void Cancelar(View view) {
         finish();
@@ -148,11 +140,13 @@ public class CadastroProdutoActivity extends Activity {
                     protected void onPostExecute(String s) {
                         super.onPostExecute(s);
                         if (s.equals("OK")) {
+
                             Toast.makeText(getBaseContext(), "Produto Cadastrado com Sucesso.", Toast.LENGTH_LONG).show();
                         }
 
                     }
                 };
+                finish();
         tarefa.execute();
     }
 }

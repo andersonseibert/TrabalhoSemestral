@@ -28,8 +28,7 @@ public class LoginActivity extends Activity {
     }
 
     public void FazerLogin(final View view) {
-        edtLogin.setText("anderson@gmail.com");
-        edtSenha.setText("123");
+
 
         final String login = edtLogin.getText().toString();
         final String senha = edtSenha.getText().toString();
