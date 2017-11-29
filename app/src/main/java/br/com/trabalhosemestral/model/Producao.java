@@ -7,14 +7,17 @@ public class Producao {
 
     private int id;
     private int ordem_producao;
-    private int protocolo;
+    private int quantidade;
     private Date data_criacao;
-    private Produto produto_cod;
-    private Ingredientes ingrediente_cod;
+    private int produto_cod;
+    private int ingrediente_cod;
 
-    public Producao(int ordem_producao, int protocolo, Date data_criacao, Produto produto_cod, Ingredientes ingrediente_cod) {
+    public Producao() {
+    }
+
+    public Producao(int ordem_producao, int quantidade, Date data_criacao, int produto_cod, int ingrediente_cod) {
         this.ordem_producao = ordem_producao;
-        this.protocolo = protocolo;
+        this.quantidade = quantidade;
         this.data_criacao = data_criacao;
         this.produto_cod = produto_cod;
         this.ingrediente_cod = ingrediente_cod;
@@ -36,12 +39,12 @@ public class Producao {
         this.ordem_producao = ordem_producao;
     }
 
-    public int getProtocolo() {
-        return protocolo;
+    public int getQuantidade() {
+        return quantidade;
     }
 
-    public void setProtocolo(int protocolo) {
-        this.protocolo = protocolo;
+    public void setQuantidade(int protocolo) {
+        this.quantidade = protocolo;
     }
 
     public Date getData_criacao() {
@@ -52,19 +55,19 @@ public class Producao {
         this.data_criacao = data_criacao;
     }
 
-    public Produto getProduto_cod() {
+    public int getProduto_cod() {
         return produto_cod;
     }
 
-    public void setProduto_cod(Produto produto_cod) {
+    public void setProduto_cod(int produto_cod) {
         this.produto_cod = produto_cod;
     }
 
-    public Ingredientes getIngrediente_cod() {
+    public int getIngrediente_cod() {
         return ingrediente_cod;
     }
 
-    public void setIngrediente_cod(Ingredientes ingrediente_cod) {
+    public void setIngrediente_cod(int ingrediente_cod) {
         this.ingrediente_cod = ingrediente_cod;
     }
 }
