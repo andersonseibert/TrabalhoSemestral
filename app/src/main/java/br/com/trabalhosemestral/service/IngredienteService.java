@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.trabalhosemestral.model.Global;
-import br.com.trabalhosemestral.model.Produto;
+import br.com.trabalhosemestral.model.Ingrediente;
 
 public class IngredienteService {
     RESTUtil restUtil = new RESTUtil();
