@@ -42,6 +42,7 @@ public class ProdutoService {
     }
 
     public void Excluir(Produto produto) {
+
         JSONObject object = new JSONObject();
         try {
             object.put("nome_produto", produto.getNome_produto());
@@ -82,4 +83,6 @@ public class ProdutoService {
         }
         return produtosList;
     }
+
+
 }

@@ -19,18 +19,18 @@ public class UsuarioService {
     private String JSON_URI = Global.caminho_api + "usuario";
 
     public void InserirUsuario(Usuario usuario) {
-        JSONObject object = new JSONObject();
+
+    JSONObject object = new JSONObject();
 
         try {
-            object.put("email", usuario.getUsu_email());
-            object.put("senha", usuario.getUsu_senha());
-            object.put("nome", usuario.getNome());
-            httpResult = restUtil.processRequest(JSON_URI, "POST", object.toString());
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        object.put("email", usuario.getUsu_email());
+        object.put("senha", usuario.getUsu_senha());
+        object.put("nome", usuario.getNome());
+        httpResult = restUtil.processRequest(JSON_URI, "POST", object.toString());
+    } catch (JSONException e) {
+        e.printStackTrace();
     }
-
+}
     public void processGet() {
         this.httpResult = restUtil.processRequest(JSON_URI, "GET", "");
     }

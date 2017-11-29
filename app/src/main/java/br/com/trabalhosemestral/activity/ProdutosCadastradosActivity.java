@@ -31,6 +31,7 @@ public class ProdutosCadastradosActivity extends Activity {
     final List<String> produtosDaLista = new ArrayList<String>();
     private EditText edtNomeProduto;
     private EditText edtDescricaoProduto;
+    private Produto produto;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -94,32 +95,19 @@ public class ProdutosCadastradosActivity extends Activity {
         String[] registro = produtosDaLista.get(posicao).split("-");
         int idProduto = Integer.parseInt(registro[0]);
 
-//        final String nomeProduto = edtNomeProduto.getText().toString();
-//        final String descricaoProduto = edtDescricaoProduto.getText().toString();
-//        final ProdutoService service = new ProdutoService();
-//
-//        AsyncTask<String, Object, String> tarefa =
-//
-//                new AsyncTask<String, Object, String>() {
-//                    @Override
-//                    protected String doInBackground(String... params) {
-//                        Produto produto = new Produto(descricaoProduto, nomeProduto, 0);
-//                        service.Excluir(produto);
-//                        return "OK";
-//                    }
-//
-//                    @Override
-//                    protected void onPostExecute(String s) {
-//                        super.onPostExecute(s);
-//                        if (s.equals("OK")) {
-//                            Toast.makeText(getBaseContext(), "Produto removido com Sucesso.", Toast.LENGTH_LONG).show();
-//                        }
-//
-//                    }
-//                };
-//        tarefa.execute();
-//
+        final ProdutoService service = new ProdutoService();
+        AsyncTask<String, Object, String> tarefa =
+                new AsyncTask<String, Object, String>() {
+                    @Override
+                    protected String doInBackground(String... params) {
+                        service.Excluir(produto);
+                        return "OK";
+                    }
+
+                };
+        tarefa.execute();
     }
+
 
     public void Produzir() {
 
@@ -163,9 +151,11 @@ public class ProdutosCadastradosActivity extends Activity {
                 ExcluirItem(posicaoItemLista);
                 produtosDaLista.remove(posicaoItemLista);
                 adaptador.notifyDataSetChanged();
+
                 dialog.dismiss();
 
             }
+
         });
         AlertDialog alert = builder.create();
         alert.show();
