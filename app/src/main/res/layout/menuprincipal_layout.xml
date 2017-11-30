@@ -16,7 +16,8 @@
         android:text="Cadastro de Produtos"
         android:textColor="@color/colorBranco"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:drawableTop="@mipmap/ic_produto"/>
 
     <Button
         android:id="@+id/btnProdutos"
@@ -30,7 +31,9 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_below="@+id/btnCadastroProdutos"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:drawableTop="@mipmap/ic_logotipo2"/>
+
 
     <Button
         android:id="@+id/btnProduzir"
@@ -44,7 +47,9 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_below="@+id/btnProdutos"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:drawableTop="@mipmap/ic_produzir2"/>
+
 
     <Button
         android:id="@+id/btnProduzidos"
@@ -58,7 +63,9 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_below="@+id/btnProduzir"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:drawableTop="@mipmap/ic_produzidos"/>
+
 
     <Button
         android:id="@+id/btnUsuarios"
@@ -72,7 +79,9 @@
         android:text="Meus Dados"
         android:textColor="@color/colorBranco"
         android:textSize="22sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:drawableTop="@mipmap/ic_barman"/>
+
 
     <Button
         android:id="@+id/btnSair"
@@ -86,6 +95,8 @@
         android:text="Sair"
         android:textColor="@color/colorBranco"
         android:textSize="22sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:drawableTop="@mipmap/ic_sair"/>
+
 
 </RelativeLayout>
