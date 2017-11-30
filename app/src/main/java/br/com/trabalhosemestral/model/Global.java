@@ -5,5 +5,5 @@ package br.com.trabalhosemestral.model;
  */
 
 public class Global {
-    public static String caminho_api = "http://192.168.0.101:8080/MyDrink/api/";
+    public static String caminho_api = "http://192.168.100.2:8084/MyDrink/api/";
 }

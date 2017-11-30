@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -8,28 +9,26 @@
         android:id="@+id/textView13"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="15dp"
         android:text="@string/legendaCadastroUsuario"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/colorBranco"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView13"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="184dp"
         android:textColor="@color/colorBranco"
         android:textStyle="bold"
         android:text="Nome de Usuário:"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:layout_below="@+id/textView13"
+        android:layout_alignParentEnd="true" />
 
     <EditText
         android:id="@+id/editText10"
@@ -106,15 +105,15 @@
         android:id="@+id/button13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/edtpass"
         android:layout_marginEnd="23dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="64dp"
         android:onClick="CadastrarUsuario"
         android:text="Salvar"
         android:textSize="18dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="26dp" />
 
     <Button
         android:id="@+id/button14"
@@ -129,5 +128,13 @@
         android:layout_alignBaseline="@+id/button13"
         android:layout_alignBottom="@+id/button13"
         android:layout_alignStart="@+id/textView23" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView13"
+        android:src="@mipmap/ic_barman" />
 
 </RelativeLayout>
