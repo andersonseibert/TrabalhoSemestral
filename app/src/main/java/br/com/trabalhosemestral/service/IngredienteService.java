@@ -15,8 +15,7 @@ import br.com.trabalhosemestral.model.Ingredientes;
 public class IngredienteService {
     RESTUtil restUtil = new RESTUtil();
     private String httpResult;
-    private String JSON_URI = Global.caminho_api + "ingrediente";
-
+    private String JSON_URI = Global.caminho_api + "ingredientes";
 
     public void Inserir(Ingredientes ingre) {
         JSONObject object = new JSONObject();
@@ -44,9 +43,8 @@ public class IngredienteService {
 
         JSONObject object = new JSONObject();
         try {
-            object.put("nome_produto", produto.getNome_produto());
-            object.put("descricao_produto", produto.getDescricao_produto());
-            object.put("quantidade_desejada", produto.getQuantidade_desejada());
+            object.put("nome_ingrediente", ingre.getNome_ingrediente());
+            object.put("quantidade_ingrediente_por_unidade", ingre.getQuantidade_ingrediente_por_unidade());
             httpResult = restUtil.processRequest(JSON_URI, "DELETE", object.toString());
         } catch (JSONException e) {
             e.printStackTrace();

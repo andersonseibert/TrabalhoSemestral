@@ -1,7 +1,6 @@
 package br.com.trabalhosemestral.model;
 
 
-
 public class Ingredientes {
     private int id;
     private String nome_ingrediente;
@@ -10,6 +9,9 @@ public class Ingredientes {
     public Ingredientes(String nome_ingrediente, Double quantidade_ingrediente_por_unidade) {
         this.nome_ingrediente = nome_ingrediente;
         this.quantidade_ingrediente_por_unidade = quantidade_ingrediente_por_unidade;
+    }
+    public Ingredientes(){
+
     }
 
     public int getId() {
@@ -35,4 +37,5 @@ public class Ingredientes {
     public void setQuantidade_ingrediente_por_unidade(Double quantidade_ingrediente_por_unidade) {
         this.quantidade_ingrediente_por_unidade = quantidade_ingrediente_por_unidade;
     }
+
 }

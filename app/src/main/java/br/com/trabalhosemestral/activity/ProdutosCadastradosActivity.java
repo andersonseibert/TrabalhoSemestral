@@ -33,6 +33,7 @@ public class ProdutosCadastradosActivity extends Activity {
     private EditText edtDescricaoProduto;
     private Produto produto;
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,19 +94,8 @@ public class ProdutosCadastradosActivity extends Activity {
 
     public void ExcluirItem(int posicao) {
         String[] registro = produtosDaLista.get(posicao).split("-");
-        int idProduto = Integer.parseInt(registro[0]);
+//        int idProduto = Integer.parseInt(registro[0]);
 
-        final ProdutoService service = new ProdutoService();
-        AsyncTask<String, Object, String> tarefa =
-                new AsyncTask<String, Object, String>() {
-                    @Override
-                    protected String doInBackground(String... params) {
-                        service.Excluir(produto);
-                        return "OK";
-                    }
-
-                };
-        tarefa.execute();
     }
 
 
@@ -143,7 +133,7 @@ public class ProdutosCadastradosActivity extends Activity {
                 dialog.dismiss();
             }
         });
-        builder.setNegativeButton("Excluir", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("Excluir", new DialogInterface.OnClickListener() {
 
 
             @Override
