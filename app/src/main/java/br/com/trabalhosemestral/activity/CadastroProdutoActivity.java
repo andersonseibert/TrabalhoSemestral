@@ -36,47 +36,6 @@ public class CadastroProdutoActivity extends Activity {
         edtDescricaoProduto = (EditText) findViewById(R.id.editText7);
     }
 
-//    @Override
-//    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
-//        super.onPostCreate(savedInstanceState);
-//        setContentView(R.layout.cadastro_produtos_layout);
-//        final ListView listView = (ListView) findViewById(R.id.listv);
-//
-//        arrayList = new ArrayList<>();
-//        adapter = new ArrayAdapter<String>(CadastroProdutoActivity.this, android.R.layout.simple_expandable_list_item_1, arrayList);
-//        listView.setAdapter(adapter);
-//        registerForContextMenu(listView);
-//        editText9 = (EditText) findViewById(R.id.editText9);
-//        editText11 = (EditText) findViewById(R.id.editText11);
-//
-//        Button btAdd = (Button) findViewById(R.id.button4);
-//        btAdd.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (editText9.getText().length() == 0) {
-//
-//                    editText9.setError("Campo vazio");
-//
-//                } else if (editText11.getText().length() == 0) {
-//
-//                    editText11.setError("Campo vazio");
-//
-//                } else {
-//
-//                    String ingrediente = editText9.getText().toString();
-//                    String quantidade = editText11.getText().toString();
-//
-//                    editText9.setText("");
-//                    editText11.setText("");
-//
-//                    arrayList.add(ingrediente + " - " + quantidade);
-//                    adapter.notifyDataSetChanged();
-//                }
-//            }
-//        });
-//        registerForContextMenu(listView);
-//
-//    }
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
@@ -85,37 +44,6 @@ public class CadastroProdutoActivity extends Activity {
 
         }
     }
-
-//    @Override
-//    public boolean onContextItemSelected(MenuItem item) {
-//        final AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
-//        switch (item.getItemId()) {
-//            case 0:
-//
-//                AlertDialog.Builder builder = new AlertDialog.Builder(this);
-//
-//                builder.setTitle("Atenção!");
-//                builder.setMessage("Deseja remover ?");
-//                builder.setCancelable(true);
-//
-//                builder.setPositiveButton("Sim", null);
-//                builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
-//
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        dialog.dismiss();
-//                        arrayList.remove(info.position);
-//                        adapter.notifyDataSetChanged();
-//                    }
-//                })
-//                        .setNegativeButton("Cancelar", null)
-//                        .show();
-////                AlertDialog dialog=builder.create();
-////                dialog.show();
-//        }
-//        return true;
-//    }
-
     public void Cancelar(View view) {
         finish();
     }
@@ -160,7 +88,7 @@ public class CadastroProdutoActivity extends Activity {
 
                     }
                 };
-                finish();
+        finish();
         tarefa.execute();
     }
 }
