@@ -11,7 +11,6 @@ import android.widget.Toast;
 
 import br.com.ajm.prototipo.prototipotelas.R;
 import br.com.trabalhosemestral.model.Usuario;
-import br.com.trabalhosemestral.service.ProdutoService;
 import br.com.trabalhosemestral.service.UsuarioService;
 
 /**
@@ -90,13 +89,32 @@ public class CadastroUsuarioActivity extends Activity {
                             startActivity(i);
                             Toast.makeText(getBaseContext(), "Usuario Cadastrado com Sucesso.", Toast.LENGTH_LONG).show();
 
-
                         }
-
-
 
                     }
                 };
         tarefa.execute();
+    }
+    public static class TrazerUsuario {
+
+        private static TrazerUsuario instance = null;
+        private static Usuario usuario = null;
+
+        public static TrazerUsuario getInstance() {
+            if (instance == null) {
+                usuario = new Usuario();
+                return instance = new TrazerUsuario();
+            } else {
+                return instance;
+            }
+        }
+
+        public void setUsuario(Usuario usuario) {
+            TrazerUsuario.usuario = usuario;
+        }
+
+        public Usuario getUsuario() {
+            return TrazerUsuario.usuario;
+        }
     }
 }

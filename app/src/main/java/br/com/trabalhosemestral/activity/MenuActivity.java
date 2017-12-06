@@ -36,6 +36,7 @@ public class MenuActivity extends AppCompatActivity {
     public void AbrirCadastroUsuario(View view){
         Intent intent2 = new Intent(getApplicationContext(), CadastroUsuarioActivity.class);
         startActivity(intent2);
+        CadastroUsuarioActivity.TrazerUsuario.getInstance().getUsuario().setNome("usuario");
     }
 
     public void FinalizarAplicacao(View view) {

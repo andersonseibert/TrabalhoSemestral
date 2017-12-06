@@ -10,9 +10,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="15dp"
         android:layout_marginLeft="10dp"
-        android:text="Produção em Andamento"
+        android:layout_marginTop="15dp"
+        android:text="Produtos Caculados"
         android:textAlignment="center"
         android:textColor="@color/colorBranco"
         android:textSize="24sp"
@@ -40,10 +40,10 @@
         android:layout_below="@+id/tituloListaProduto"
         android:layout_marginEnd="11dp"
         android:layout_marginLeft="10dp"
-        android:textColor="@color/colorBranco"
-        android:textStyle="bold"
         android:onClick="ProduzirProdutos"
-        android:text="Produzir" />
+        android:text="Calcular"
+        android:textColor="@color/colorBranco"
+        android:textStyle="bold" />
 
 
     <ListView

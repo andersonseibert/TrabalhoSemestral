@@ -39,32 +39,32 @@
         android:id="@+id/btnProduzir"
         android:layout_width="match_parent"
         android:layout_height="110sp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnProdutos"
         android:width="180sp"
+        android:drawableTop="@mipmap/ic_produzir2"
         android:gravity="bottom|center"
         android:onClick="ProduzirProdutos"
-        android:text="Produzir"
+        android:text="Produzir/Calcular"
         android:textColor="@color/colorBranco"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_below="@+id/btnProdutos"
-        android:layout_alignParentStart="true"
-        android:drawableTop="@mipmap/ic_produzir2"/>
+        android:textStyle="bold" />
 
 
     <Button
         android:id="@+id/btnProduzidos"
         android:layout_width="match_parent"
         android:layout_height="110sp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnProduzir"
         android:width="180sp"
+        android:drawableTop="@mipmap/ic_produzidos"
         android:gravity="bottom|center"
         android:onClick="ListaProduzidos"
-        android:text="Produzidos"
+        android:text="Calculados"
         android:textColor="@color/colorBranco"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_below="@+id/btnProduzir"
-        android:layout_alignParentStart="true"
-        android:drawableTop="@mipmap/ic_produzidos"/>
+        android:textStyle="bold" />
 
 
     <Button
